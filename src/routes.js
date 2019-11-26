@@ -1,3 +1,3 @@
-const { UserController } = require("./controller");
+const { UserController, MessageController } = require('./controller');
 
-module.exports = [new UserController()];
+module.exports = [new UserController(), new MessageController()];

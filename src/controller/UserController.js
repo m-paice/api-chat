@@ -1,21 +1,14 @@
-const { Router } = require("express");
-const User = require("../models/User");
+const User = require('../models/User');
 
-const BaseController = require("./BaseController");
+const BaseController = require('./BaseController');
 
 class UserController extends BaseController {
   constructor() {
-    super(User, "/users");
-  }
-
-  async login(req, res) {
-    return res.json({ message: 'Ok' })
+    super(User, '/users');
   }
 
   routes() {
-    const route = super.routes()
-
-    route.post("/users/login", this.login.bind(this));
+    const route = super.routes();
 
     return route;
   }
